@@ -890,7 +890,7 @@ body{
     border: none;
     border-radius: 20px;
 
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
 }
 
 .browse-section h1{
@@ -1158,3 +1158,237 @@ body{
     }
 }
 
+/********** CUSTOMER SECTION **********/
+.customer-container{
+    margin-top: 80px;
+}
+
+
+.customer-header{
+    padding: 0 7.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.customer-header h2{
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-right: 50px;
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.customer-group{
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 80px;
+    /* filter: blur(4px); */
+    position: relative;
+}
+
+.customer-group:hover .customer-slider {
+    animation-play-state: paused;
+}
+
+.customer-slider{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-right: 20px;
+    /* overflow-x: scroll; */
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+}
+
+.left-animation{
+    animation: scroll1 20s linear infinite;
+}
+
+.right-animation{
+    animation: scroll2 20s linear infinite;
+}
+
+@keyframes scroll1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+@media screen and (min-width: 1700px) {
+    .customer-slider{
+        gap: 70px;
+        padding-right: 70px;
+    }
+
+    .customer-group{
+        max-width: 1920px;
+        width: 100%;
+        align-self: center;
+    }
+
+    .customer-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .customer-header{
+        align-self: center;
+        width: 100%;
+        max-width: 1920px;
+    }
+}
+
+
+
+.slider-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    height: 240px;
+    width: 400px;
+}
+
+.slider-box-inside{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 28px 32px;
+}
+
+.left-arrow, .right-arrow {
+    cursor: pointer; /* Makes the image appear clickable */
+}
+
+.review-stars{
+    display: flex;
+    align-items: center;
+    gap: 6.49px;
+}
+
+.customer-name{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.customer-name h3{
+    font-family: var(--primary-font);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.customer-name img{
+    width: 24px;
+    height: 24px;
+}
+
+.customer-feedback{
+    font-family: var(--primary-font);
+    line-height: 22px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+}
+
+.customer{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media screen and (max-width:800px) {
+    .customer-header h2{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .customer-container{
+        margin-top: 50px;
+    }
+
+    .customer-header{
+        padding: 0 16px;
+        margin-bottom: 24px;
+    }
+
+    .customer-header h2{
+        font-size: 2rem;
+        line-height: 36px;
+        margin-right: 0px;
+    }
+
+    .arrow{
+        align-self: flex-end;
+        gap: 10px;
+    }
+
+    .slider-box{
+        height: 208px;
+        width: 358px;
+    }
+    
+    .slider-box-inside{
+        gap: 12px;
+        padding: 24px;
+    }
+
+    .review-stars{
+        gap: 5.51px;
+    }
+
+    .review-stars img{
+        height: 19.19px;
+        width: 19.19px;
+    }
+
+    .customer{
+        gap: 8px;
+    }
+
+    .customer-name h3{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .customer-name img{
+        width: 19px;
+        height: 19px;
+    }
+
+    .customer-feedback{
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .customer-group{
+        margin-bottom: 50px;
+    }
+}

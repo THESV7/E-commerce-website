@@ -85,3 +85,26 @@ productGrids.forEach((gridWrapper) => {
     // Listen for window resize event to adjust arrow visibility dynamically
     window.addEventListener('resize', adjustArrowVisibilityOnResize);
 });
+
+
+//DIRECTION
+
+// Get references to the elements
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+const customerSliders = document.querySelectorAll('.customer-slider');
+
+// Add event listeners for arrows
+leftArrow.addEventListener('click', () => {
+    customerSliders.forEach(slider => {
+        slider.classList.remove('right-animation');
+        slider.classList.add('left-animation');
+    });
+});
+
+rightArrow.addEventListener('click', () => {
+    customerSliders.forEach(slider => {
+        slider.classList.remove('left-animation');
+        slider.classList.add('right-animation');
+    });
+});
