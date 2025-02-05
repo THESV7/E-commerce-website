@@ -1217,6 +1217,12 @@ body{
     animation: scroll2 20s linear infinite;
 }
 
+.customer-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 @keyframes scroll1 {
     0% {
         transform: translateX(0);
@@ -1396,6 +1402,7 @@ body{
 /********** NEWSLETTER SECTION **********/
 .footer-container{
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
 }
@@ -1522,4 +1529,20 @@ body{
     }
 }
 
+/********** FOOTER SECTION **********/
+.news-wrapper{
+    display: flex;
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: -89px;
+}
+
+.footer-container{
+    background-color: #F0F0F0;
+    height: 500px;
+    position: relative;
+    margin-top: 89px;
+}
 
